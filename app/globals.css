@@ -1,27 +1,62 @@
+/* globals.css */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-gray-100;
+  font-family: Arial, sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.container {
+  @apply max-w-3xl mx-auto p-4;
+}
+
+a {
+  @apply text-blue-600;
+}
+
+a:hover {
+  @apply text-blue-800;
+}
+
+.header {
+  @apply bg-gray-800 text-white py-4;
+}
+
+.header nav {
+  @apply container flex justify-center items-center;
+}
+
+.header nav a {
+  @apply text-white text-lg;
+}
+
+.header nav a:hover {
+  @apply text-gray-200;
+}
+
+.blog-index {
+  @apply bg-gray-100 p-4;
+}
+
+.blog-post {
+  @apply bg-white shadow-md p-4 rounded-lg;
+}
+
+.blog-post h1 {
+  @apply text-3xl font-bold mb-4;
+}
+
+.blog-post p {
+  @apply text-lg mb-4;
+}
+
+.footer {
+  @apply bg-gray-800 text-white py-4 text-center;
+}
+
+.footer p {
+  @apply text-lg;
 }
